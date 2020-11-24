@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/homepage/homepage.component';
 import ShopPage from './components/shop/shop.components';
-
+import Header from './components/header/header.components';
 const HatsPage = () => {
   return (
     <div>
@@ -17,10 +17,11 @@ const HatsPage = () => {
 function App() {
   return (
     <div className="App">
+      <Header />
       <Switch>
-        <Route exact path='/' component={HomePage} />
+        <Route exact path='/' component={ HomePage } />
         <Route exact path='/shop' component={ShopPage} />
-        <Route exact path='/hats' component={HatsPage} />
+        <Route exact path='/hats' component={ HatsPage } />
       </Switch>
     </div>
   );
